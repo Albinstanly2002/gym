@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARDOX GYM | Retro-Futuristic Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@400;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <span>HARDOX</span>
+                <span>GYM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#training">TRAINING</a></li>
+                <li><a href="#facilities">FACILITIES</a></li>
+                <li><a href="#membership">MEMBERSHIP</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="nav-button">JOIN NOW</div>
+            <div class="mobile-menu-btn">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/gym-background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>PUSH BEYOND <span>YOUR LIMITS</span></h1>
+            <p>ADVANCED CARDIO AND WEIGHT TRAINING WITH PERFORMANCE TRACKING</p>
+            <div class="hero-buttons">
+                <a href="#training" class="btn-primary">OUR PROGRAMS</a>
+                <a href="#membership" class="btn-secondary">FREE TRIAL</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>SCROLL DOWN</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section class="training-section" id="training" data-aos="fade-up">
+        <div class="section-header">
+            <h2>SPECIALIZED <span>TRAINING</span></h2>
+            <p>SCIENTIFICALLY DESIGNED PROGRAMS FOR MAXIMUM RESULTS</p>
+        </div>
+        
+        <div class="training-grid">
+            <!-- Cardio Training -->
+            <div class="program-card cardio" data-aos="fade-right" data-aos-delay="100">
+                <div class="card-image" style="background-image: url('images/cardio-training.jpg')"></div>
+                <div class="card-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>ADVANCED CARDIO</h3>
+                <ul>
+                    <li>HIIT PERFORMANCE ZONES</li>
+                    <li>VO2 MAX OPTIMIZATION</li>
+                    <li>METABOLIC CONDITIONING</li>
+                    <li>SMART TREADMILL TRAINING</li>
+                </ul>
+                <div class="card-hover"></div>
+            </div>
+            
+            <!-- Weight Training -->
+            <div class="program-card weights" data-aos="fade-right" data-aos-delay="200">
+                <div class="card-image" style="background-image: url('images/weight-training.jpg')"></div>
+                <div class="card-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>PRECISION STRENGTH</h3>
+                <ul>
+                    <li>3D MOTION TRACKING</li>
+                    <li>PROGRESSIVE OVERLOAD SYSTEM</li>
+                    <li>STRENGTH BENCHMARKING</li>
+                    <li>RECOVERY ANALYTICS</li>
+                </ul>
+                <div class="card-hover"></div>
+            </div>
+            
+            <!-- Hybrid Training -->
+            <div class="program-card hybrid" data-aos="fade-right" data-aos-delay="300">
+                <div class="card-image" style="background-image: url('images/hybrid-training.jpg')"></div>
+                <div class="card-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>HYBRID PERFORMANCE</h3>
+                <ul>
+                    <li>CARDIO-STRENGTH CIRCUITS</li>
+                    <li>POWER ENDURANCE DRILLS</li>
+                    <li>FUNCTIONAL MOVEMENT TRAINING</li>
+                    <li>SMART EQUIPMENT INTEGRATION</li>
+                </ul>
+                <div class="card-hover"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="trainers-section" id="trainers" data-aos="fade-up">
+        <div class="section-header">
+            <h2>ELITE <span>TRAINERS</span></h2>
+            <p>EXPERT GUIDANCE FOR YOUR FITNESS JOURNEY</p>
+        </div>
+        
+        <div class="trainers-grid">
+            <div class="trainer-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="trainer-image" style="background-image: url('images/trainer1.jpg')">
+                    <div class="trainer-overlay">
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h3>ALEX THORNE</h3>
+                <p>STRENGTH & CONDITIONING SPECIALIST</p>
+                <ul class="trainer-specialties">
+                    <li>POWERLIFTING</li>
+                    <li>SPORTS PERFORMANCE</li>
+                    <li>INJURY PREVENTION</li>
+                </ul>
+            </div>
+
+            <div class="trainer-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="trainer-image" style="background-image: url('images/trainer2.jpg')">
+                    <div class="trainer-overlay">
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h3>NOVA CHEN</h3>
+                <p>HIIT & CARDIO EXPERT</p>
+                <ul class="trainer-specialties">
+                    <li>METABOLIC CONDITIONING</li>
+                    <li>ENDURANCE TRAINING</li>
+                    <li>NUTRITION COACHING</li>
+                </ul>
+            </div>
+
+            <div class="trainer-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="trainer-image" style="background-image: url('images/trainer3.jpg')">
+                    <div class="trainer-overlay">
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h3>MAX STEEL</h3>
+                <p>FUNCTIONAL TRAINING SPECIALIST</p>
+                <ul class="trainer-specialties">
+                    <li>MOVEMENT PATTERNS</li>
+                    <li>MOBILITY TRAINING</li>
+                    <li>REHABILITATION</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities-section" id="facilities" data-aos="fade-up">
+        <div class="section-header">
+            <h2>FUTURE-READY <span>FACILITIES</span></h2>
+            <p>TECHNOLOGY-ENHANCED TRAINING ENVIRONMENT</p>
+        </div>
+        
+        <div class="facility-showcase">
+            <div class="facility-card" data-aos="fade-left" data-aos-delay="100">
+                <div class="facility-image" style="background-image: url('images/cardio-zone.jpg')"></div>
+                <h3>SMART CARDIO ZONE</h3>
+                <p>EQUIPMENT WITH BIOMETRIC FEEDBACK</p>
+            </div>
+            
+            <div class="facility-card" data-aos="fade-left" data-aos-delay="200">
+                <div class="facility-image" style="background-image: url('images/strength-zone.jpg')"></div>
+                <h3>PRECISION STRENGTH AREA</h3>
+                <p>AI-ASSISTED FORM CORRECTION</p>
+            </div>
+            
+            <div class="facility-card" data-aos="fade-left" data-aos-delay="300">
+                <div class="facility-image" style="background-image: url('images/recovery-zone.jpg')"></div>
+                <h3>RECOVERY LOUNGE</h3>
+                <p>PERCUSSION THERAPY AND CRYO OPTIONS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="membership-section" id="membership">
+        <div class="membership-container">
+            <div class="membership-content">
+                <h2>READY TO <span>TRANSFORM?</span></h2>
+                <p>7-DAY TRIAL INCLUDING 2 PERSONAL TRAINING SESSIONS</p>
+                <a href="#contact" class="btn-primary">GET STARTED</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span>HARDOX</span>
+                    <span>GYM</span>
+                </div>
+                <p>ADVANCED FITNESS TRAINING</p>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>CONTACT</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 FITNESS AVE, CITY</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> INFO@HARDOXGYM.COM</p>
+            </div>
+            
+            <div class="footer-hours">
+                <h3>HOURS</h3>
+                <p>MON-FRI: 5AM - 11PM</p>
+                <p>SAT-SUN: 7AM - 9PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 HARDOX GYM. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
