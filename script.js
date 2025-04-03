@@ -1,33 +1,75 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const menuBtn = document.querySelector('.mobile-menu-btn');
+    // Mobile Menu
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const menuLines = document.querySelectorAll('.menu-line');
+    const body = document.body;
     
-    menuBtn.addEventListener('click', function() {
+    mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         menuLines.forEach(line => line.classList.toggle('active'));
+        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
     
-    // Smooth Scrolling for Anchor Links
+    // Close menu when clicking a link
+    const navLinksArray = document.querySelectorAll('.nav-links a');
+    navLinksArray.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuLines.forEach(line => line.classList.remove('active'));
+            body.style.overflow = '';
+        });
+    });
+    
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 60;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: offsetPosition,
                     behavior: 'smooth'
                 });
-                
-                // Close mobile menu if open
-                navLinks.classList.remove('active');
-                menuLines.forEach(line => line.classList.remove('active'));
             }
         });
+    });
+    
+    // Close mobile menu on window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('active');
+            menuLines.forEach(line => line.classList.remove('active'));
+            body.style.overflow = '';
+        }
+    });
+    
+    // Hide/Show header on scroll
+    let lastScroll = 0;
+    const header = document.querySelector('.main-nav');
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            header.classList.remove('scroll-up');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+            // Scrolling down
+            header.classList.remove('scroll-up');
+            header.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+            // Scrolling up
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+        }
+        lastScroll = currentScroll;
     });
     
     // Navbar Scroll Effect
